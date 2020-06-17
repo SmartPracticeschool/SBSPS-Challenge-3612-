@@ -6,12 +6,12 @@ def bill_count(totalMoney,billList):
     restMoney = totalMoney
     billCount = 0
     i = len(billList)-1
-    while(restMoney > 0):
+    while(restMoney >= 0):
         if(billList[i]>0):
             temp = math.floor(restMoney/billList[i])
             billCount += temp
             restMoney -= temp*billList[i]
-         else:
+        else:
             return "Invalid Bill Amount"
         i = i-1
     return billCount
